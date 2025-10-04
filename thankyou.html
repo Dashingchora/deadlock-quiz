@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thank You</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>🎉 Thank You for Participating!</h2>
+    <p>Your score: <strong id="score"></strong></p>
+    <p>Responses have been saved successfully ✅</p>
+  </div>
+
+  <script>
+    const score = localStorage.getItem("quizScore") || 0;
+    document.getElementById("score").textContent = score;
+    localStorage.clear();
+  </script>
+</body>
+</html>
