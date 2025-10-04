@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DBMS Deadlock Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome to DBMS Deadlock Quiz</h2>
+    <form id="loginForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="College Email" required />
+      <button type="submit">Start Quiz</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      if (!name || !email) return alert("Please enter both name and email!");
+      localStorage.setItem("userName", name);
+      localStorage.setItem("userEmail", email);
+      window.location.href = "quiz.html";
+    });
+  </script>
+</body>
+</html>
